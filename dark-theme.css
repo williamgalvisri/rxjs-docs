@@ -1,0 +1,17 @@
+/* dark-theme.css */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+a {
+    color: #bb86fc;
+}
+pre {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+}
+code {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+/* Agrega más estilos según sea necesario */

@@ -1,0 +1,8 @@
+markdown: kramdown
+theme: jekyll-theme-cayman # o el tema que estés utilizando
+plugins:
+  - jekyll-assets
+
+# Agrega tu CSS personalizado
+css:
+  - /path/to/dark-theme.css
