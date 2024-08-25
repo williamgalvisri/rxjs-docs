@@ -75,6 +75,7 @@ ngOnInit() {
 
 **Operadores más usados:**
 - **map**: Transforma los valores emitidos por un observable. Aplica una función a cada valor emitido por un observable y emite los valores resultantes.
+  
 ```ts
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -85,7 +86,6 @@ of(1, 2, 3).pipe(
 ```
 
 - **filter**:  Filtra los valores emitidos. Emite solo los valores que pasan una condición determinada.
-
 
 ```ts
 import { of } from 'rxjs';
