@@ -83,7 +83,9 @@ of(1, 2, 3).pipe(
   map(value => value * 2)
 ).subscribe(console.log); // Output: 2, 4, 6
 ```
+
 - **filter**:  Filtra los valores emitidos. Emite solo los valores que pasan una condición determinada.
+
 
 ```ts
 import { of } from 'rxjs';
@@ -93,6 +95,7 @@ of(1, 2, 3, 4, 5).pipe(
   filter(value => value % 2 === 0)
 ).subscribe(console.log); // Output: 2, 4
 ```
+
 - **mergeMap**: Combina observables de manera plana. Mapea cada valor a un observable y fusiona los resultados.
 
 ```ts
