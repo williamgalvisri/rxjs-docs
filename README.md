@@ -43,8 +43,8 @@ ngOnInit() {
 ```
 ## 3. Operadores | [Stackblitz](https://stackblitz.com/edit/stackblitz-starters-d4bxsh?file=src%2Fmain.ts)
 - Acontinuación crearemos un operador para ejemplificar el uso: 
-```ts 
 
+```ts 
 // multiply-values.ts
 export function multiplyValue(
   number: number
@@ -70,16 +70,7 @@ ngOnInit() {
   setTimeout(() => {
     subscription.unsubscribe();
   }, 2000);
-}
-```
-
-**Resultado:**
-
-
-```ts
-5
-10
-15
+} //  Output: 5, 10, 15
 ```
 
 **Operadores más usados:**
