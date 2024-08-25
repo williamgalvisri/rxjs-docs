@@ -45,7 +45,7 @@ ngOnInit() {
 - Acontinuación crearemos un operador para ejemplificar el uso: 
 ```ts 
 
-[multiply-values.ts]
+// multiply-values.ts
 export function multiplyValue(
   number: number
 ): OperatorFunction<number, number> {
@@ -54,9 +54,8 @@ export function multiplyValue(
       return source.pipe(map((value) => value * number)).subscribe(observer);
     });
 }
-...
 
-[main.ts]
+// main.ts
 ngOnInit() {
   const _observable$ = of(1, 2, 3);
   const subscription = _observable$
@@ -73,12 +72,16 @@ ngOnInit() {
   }, 2000);
 }
 ```
+
 **Resultado:**
-```
+
+
+```ts
 5
 10
 15
 ```
+
 **Operadores más usados:**
 - **map**: Transforma los valores emitidos por un observable. Aplica una función a cada valor emitido por un observable y emite los valores resultantes.
 ```ts
@@ -226,7 +229,9 @@ lastValueFrom(observable$).then(value => {
 
 ## 4. Ahora hablemos de lo que no se puede hacer, antipatrones que son...
 ![Antipatron](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzE5eWE1YmIxOXFnYzJmOG9rdGJucWRwNDN2cXl0ZWs3eXJsNjB2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X9QEx7PMwNELs7l4p0/giphy.gif)
-Los antipatrones son prácticas comunes en el desarrollo de software que, aunque pueden parecer útiles o eficientes en el corto plazo, generalmente conducen a problemas de mantenimiento, rendimiento o escalabilidad en el largo plazo. En el contexto de RxJS, es importante conocer estos antipatrones para evitarlos y así escribir código más robusto y sostenible.
+
+
+- Los antipatrones son prácticas comunes en el desarrollo de software que, aunque pueden parecer útiles o eficientes en el corto plazo, generalmente conducen a problemas de mantenimiento, rendimiento o escalabilidad en el largo plazo. En el contexto de RxJS, es importante conocer estos antipatrones para evitarlos y así escribir código más robusto y sostenible.
 
 1. **Suscripciones Anidadas | [Stackblitz](https://stackblitz.com/edit/stackblitz-starters-yj8cok?file=src%2Fmain.ts) | [Stackblitz 1](https://stackblitz.com/edit/stackblitz-starters-6undij?file=src%2Fmain.ts):**
 Ocurre cuando se suscribe a un observable dentro de otro observable, en lugar de utilizar operadores de combinación como mergeMap, switchMap, concatMap, etc.
