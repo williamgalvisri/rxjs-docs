@@ -1,5 +1,5 @@
 markdown: kramdown
-theme: jekyll-theme-slate # o el tema que estés utilizando
+theme: jekyll-theme-cayman # o el tema que estés utilizando
 plugins:
   - jekyll-assets
 
